@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Kogane Jidai no Gemu";
+  src: url("/fonts/Koganejidainogemu.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 :root {
   --ink: #151714;
   --coal: #0c0e0c;
@@ -509,3 +517,35 @@ footer { min-height: 112px; background: #080b09; color: #6f7972; border-top: 1px
   .rock-mid { box-shadow: 62px 31px 0 #2c332d, 62px 31px 0 2px #1b1e1b, -31px 31px 0 #343b35, -31px 31px 0 2px #1d211e; }
   .rock-front { box-shadow: 62px 0 0 #282f29, 62px 0 0 2px #171a18, 31px -31px 0 #527b3a, 31px -31px 0 2px #28451c; }
 }
+
+/* Custom display type */
+:root { --font-kogane: "Kogane Jidai no Gemu"; }
+
+h1,
+h2,
+.brand,
+.button,
+.header-cta,
+.text-link,
+.eyebrow,
+.section-index,
+.service-card h3,
+.stages h3,
+.stage-index,
+.depth-label,
+.coordinate,
+.hero-foot,
+.tags span,
+.safety-copy li {
+  font-family: var(--font-kogane), var(--font-unbounded), sans-serif;
+  font-weight: 400;
+}
+
+h1 { letter-spacing: -.012em; }
+h2 { letter-spacing: -.006em; }
+.brand { letter-spacing: .035em; }
+.button,
+.header-cta,
+.text-link { letter-spacing: .045em; }
+.service-card h3,
+.stages h3 { letter-spacing: .005em; }
