@@ -549,3 +549,41 @@ h2 { letter-spacing: -.006em; }
 .text-link { letter-spacing: .045em; }
 .service-card h3,
 .stages h3 { letter-spacing: .005em; }
+
+/* Cave artwork background */
+.hero {
+  background-color: #080a08;
+  background-image: url("/cave-background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero::before {
+  inset: 0;
+  z-index: 1;
+  height: auto;
+  opacity: 1;
+  background:
+    linear-gradient(90deg, rgba(4, 6, 5, .9) 0%, rgba(4, 6, 5, .68) 42%, rgba(4, 6, 5, .24) 72%, rgba(4, 6, 5, .42) 100%),
+    linear-gradient(180deg, rgba(2, 3, 2, .48) 0%, transparent 30%, rgba(2, 3, 2, .42) 100%);
+  border: 0;
+  clip-path: none;
+  pointer-events: none;
+}
+
+.hero-grid { z-index: 2; opacity: .055; }
+.rock-visual { display: none; }
+
+.hero-copy,
+.depth-label,
+.hero-foot { z-index: 3; }
+
+@media (max-width: 600px) {
+  .hero { background-position: 58% center; }
+  .hero::before {
+    background:
+      linear-gradient(90deg, rgba(4, 6, 5, .9) 0%, rgba(4, 6, 5, .68) 75%, rgba(4, 6, 5, .52) 100%),
+      linear-gradient(180deg, rgba(2, 3, 2, .5) 0%, transparent 32%, rgba(2, 3, 2, .48) 100%);
+  }
+}
