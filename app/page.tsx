@@ -35,9 +35,9 @@ export default function Home() {
           <span>ROCK<span>SCIENCE</span></span>
         </a>
         <nav aria-label="Основная навигация">
-          <a href="#services">Направления</a>
-          <a href="#approach">Подход</a>
-          <a href="#safety">Безопасность</a>
+          <a href="#team">Команда</a>
+          <a href="#services">Услуги</a>
+          <a href="#contact">Контакты</a>
         </nav>
         <a className="header-cta" href="#contact">Обсудить проект <span>↗</span></a>
       </header>
@@ -75,7 +75,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="manifesto section-pad">
+      <section className="manifesto section-pad" id="team">
         <p className="section-index">/ 01 — О КОМПАНИИ</p>
         <div className="manifesto-copy">
           <h2>Мы видим в массиве<br />не преграду, а <em>потенциал.</em></h2>
