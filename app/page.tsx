@@ -76,13 +76,28 @@ export default function Home() {
       </section>
 
       <section className="manifesto section-pad" id="team">
-        <p className="section-index">/ 01 — О КОМПАНИИ</p>
-        <div className="manifesto-copy">
-          <h2>Мы видим в массиве<br />не преграду, а <em>потенциал.</em></h2>
-          <div>
-            <p>RockScience объединяет горную инженерию, геологию и пространственный дизайн. Мы сопровождаем объект от первого сканирования до готовой к эксплуатации среды.</p>
-            <p>Одна команда. Единая ответственность. Полный контроль над результатом.</p>
-          </div>
+        <p className="section-index">/ 01 — КОМАНДА</p>
+        <div className="team-heading">
+          <h2>Команда<br /><em>RockScience</em></h2>
+          <p>Два крупных блока команды. Здесь можно будет разместить информацию о ключевых направлениях, подразделениях или руководителях.</p>
+        </div>
+        <div className="team-grid">
+          <article className="team-block">
+            <span className="team-number">01</span>
+            <div>
+              <p className="team-label">Крупный блок</p>
+              <h3>Название первого блока</h3>
+              <p>Здесь будет основная информация о первой части команды.</p>
+            </div>
+          </article>
+          <article className="team-block">
+            <span className="team-number">02</span>
+            <div>
+              <p className="team-label">Крупный блок</p>
+              <h3>Название второго блока</h3>
+              <p>Здесь будет основная информация о второй части команды.</p>
+            </div>
+          </article>
         </div>
       </section>
 

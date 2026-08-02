@@ -551,6 +551,112 @@ h2 { letter-spacing: -.006em; }
 .service-card h3,
 .stages h3 { letter-spacing: .005em; }
 
+/* Team section */
+.team-heading {
+  display: grid;
+  grid-template-columns: 1.15fr .75fr;
+  gap: 9vw;
+  align-items: end;
+  margin-bottom: 58px;
+}
+
+.team-heading h2 {
+  font-size: clamp(44px, 5.8vw, 86px);
+  line-height: .98;
+}
+
+.team-heading > p {
+  margin: 0 0 7px;
+  color: #98a39b;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.team-block {
+  position: relative;
+  min-height: 390px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  background:
+    linear-gradient(145deg, rgba(24, 31, 26, .96), rgba(14, 19, 16, .98));
+  border: 1px solid rgba(255, 255, 255, .09);
+  border-radius: 7px;
+  box-shadow: 0 22px 70px rgba(0, 0, 0, .22);
+}
+
+.team-block::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: .12;
+  pointer-events: none;
+  background-image:
+    linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px),
+    linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: linear-gradient(to bottom right, black, transparent 72%);
+}
+
+.team-number,
+.team-label,
+.team-block h3 {
+  position: relative;
+  font-family: var(--font-kogane), var(--font-unbounded), sans-serif;
+  font-weight: 400;
+}
+
+.team-number {
+  color: var(--acid);
+  font-size: 12px;
+  letter-spacing: .08em;
+}
+
+.team-label {
+  margin: 0 0 14px;
+  color: #778279;
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.team-block h3 {
+  max-width: 520px;
+  margin: 0 0 18px;
+  color: #edf3ee;
+  font-size: clamp(28px, 3vw, 46px);
+  line-height: 1.08;
+}
+
+.team-block > div > p:last-child {
+  position: relative;
+  max-width: 430px;
+  margin: 0;
+  color: #8f9a91;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+@media (max-width: 800px) {
+  .team-heading { grid-template-columns: 1fr; gap: 26px; }
+  .team-heading > p { max-width: 560px; }
+  .team-grid { grid-template-columns: 1fr; }
+  .team-block { min-height: 330px; }
+}
+
+@media (max-width: 600px) {
+  .team-heading { margin-bottom: 38px; }
+  .team-block { min-height: 290px; padding: 24px; }
+}
+
 /* Cave artwork background */
 .hero {
   background-color: #080a08;
