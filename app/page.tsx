@@ -103,7 +103,8 @@ export default function Home() {
               <p>Здесь будет основная информация о второй части команды.</p>
             </div>
             <div className="team-miners">
-              <img src="/team-miners.png" alt="Команда шахтёров RockScience" />
+              <img className="team-miners-default" src="/team-miners.png" alt="Команда шахтёров RockScience" />
+              <img className="team-miners-hover" src="/team-miners-celebrating.png" alt="" aria-hidden="true" />
             </div>
           </article>
         </div>
