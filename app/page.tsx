@@ -91,7 +91,7 @@ export default function Home() {
             <div className="team-content">
               <span className="team-number">01</span>
               <p className="team-label">Крупный блок</p>
-              <h3>Владелец компании: Иосиф А. Г.</h3>
+              <h3>Владелец компании: <span className="owner-name">Иосиф А. Г.</span></h3>
               <p className="team-statement">RockScience — горнодобывающая компания, объединённая одной целью и волей Верховного Руководителя. Вступая в наш коллектив, вы принимаете корпоративные принципы и становитесь частью избранного сообщества. Мы добываем не просто ресурсы — мы создаём будущее. Одна команда. Одна воля. Один лидер.</p>
             </div>
           </article>

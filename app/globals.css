@@ -765,6 +765,11 @@ h2 { letter-spacing: -.006em; }
   line-height: 1.08;
 }
 
+.owner-name {
+  display: inline-block;
+  white-space: nowrap;
+}
+
 .team-content > p:last-child {
   position: relative;
   max-width: 430px;
