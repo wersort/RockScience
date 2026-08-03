@@ -618,9 +618,10 @@ h2 { letter-spacing: -.006em; }
 
 .team-gold-panel {
   position: absolute;
-  z-index: 0;
+  z-index: 1;
   inset: 0;
   overflow: hidden;
+  border-radius: 6px 6px 0 0;
   opacity: 0;
   background:
     radial-gradient(circle at 35% 32%, rgba(255, 250, 187, .78), transparent 30%),
@@ -667,12 +668,32 @@ h2 { letter-spacing: -.006em; }
   transform: translateY(7px) scale(.985);
 }
 
-.team-portrait:hover .team-gold-panel {
+.team-block-featured:has(.team-portrait:hover) .team-gold-panel {
   opacity: 1;
 }
 
-.team-portrait:hover .team-gold-panel::after {
+.team-block-featured:has(.team-portrait:hover) .team-gold-panel::after {
   animation: team-gold-sheen .68s cubic-bezier(.2, .7, .2, 1) both;
+}
+
+.team-block-featured .team-number,
+.team-block-featured .team-label,
+.team-block-featured h3,
+.team-block-featured .team-content > p:last-child {
+  transition: color .22s ease-out;
+}
+
+.team-block-featured:has(.team-portrait:hover) .team-number,
+.team-block-featured:has(.team-portrait:hover) .team-label {
+  color: #694400;
+}
+
+.team-block-featured:has(.team-portrait:hover) h3 {
+  color: #171108;
+}
+
+.team-block-featured:has(.team-portrait:hover) .team-content > p:last-child {
+  color: #5c4214;
 }
 
 .team-portrait:hover .team-portrait-default {
@@ -693,7 +714,7 @@ h2 { letter-spacing: -.006em; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .team-portrait:hover .team-gold-panel::after { animation: none; }
+  .team-block-featured:has(.team-portrait:hover) .team-gold-panel::after { animation: none; }
 }
 
 .team-block::before {
