@@ -574,14 +574,14 @@ h2 { letter-spacing: -.006em; }
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: 1fr;
+  gap: 24px;
 }
 
 .team-block {
   position: relative;
-  min-height: 390px;
-  padding: 30px;
+  min-height: 400px;
+  padding: 38px 42px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -591,6 +591,42 @@ h2 { letter-spacing: -.006em; }
   border: 1px solid rgba(255, 255, 255, .09);
   border-radius: 7px;
   box-shadow: 0 22px 70px rgba(0, 0, 0, .22);
+}
+
+.team-block-featured {
+  margin-top: 76px;
+  padding: 38px 48px 38px 0;
+  display: grid;
+  grid-template-columns: minmax(360px, .9fr) minmax(340px, 1.1fr);
+  gap: 44px;
+  align-items: center;
+  overflow: visible;
+}
+
+.team-portrait {
+  position: relative;
+  align-self: stretch;
+  min-height: 324px;
+  pointer-events: none;
+}
+
+.team-portrait img {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  bottom: -38px;
+  width: auto;
+  height: 530px;
+  max-width: 118%;
+  object-fit: contain;
+  object-position: left bottom;
+  filter: drop-shadow(18px 18px 30px rgba(0, 0, 0, .38));
+}
+
+.team-content {
+  position: relative;
+  z-index: 3;
+  max-width: 650px;
 }
 
 .team-block::before {
@@ -615,6 +651,8 @@ h2 { letter-spacing: -.006em; }
 }
 
 .team-number {
+  display: inline-block;
+  margin-bottom: 48px;
   color: var(--acid);
   font-size: 12px;
   letter-spacing: .08em;
@@ -636,7 +674,7 @@ h2 { letter-spacing: -.006em; }
   line-height: 1.08;
 }
 
-.team-block > div > p:last-child {
+.team-content > p:last-child {
   position: relative;
   max-width: 430px;
   margin: 0;
@@ -648,13 +686,31 @@ h2 { letter-spacing: -.006em; }
 @media (max-width: 800px) {
   .team-heading { grid-template-columns: 1fr; gap: 26px; }
   .team-heading > p { max-width: 560px; }
-  .team-grid { grid-template-columns: 1fr; }
   .team-block { min-height: 330px; }
+  .team-block-featured {
+    margin-top: 90px;
+    padding: 280px 28px 32px;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .team-portrait { position: absolute; inset: 0; min-height: 0; }
+  .team-portrait img {
+    left: 50%;
+    bottom: auto;
+    top: -100px;
+    height: 420px;
+    max-width: 96%;
+    transform: translateX(-50%);
+    object-position: center top;
+  }
 }
 
 @media (max-width: 600px) {
   .team-heading { margin-bottom: 38px; }
-  .team-block { min-height: 290px; padding: 24px; }
+  .team-block { min-height: 300px; padding: 26px; }
+  .team-block-featured { margin-top: 80px; padding-top: 255px; }
+  .team-portrait img { top: -86px; height: 370px; }
+  .team-number { margin-bottom: 34px; }
 }
 
 /* Cave artwork background */

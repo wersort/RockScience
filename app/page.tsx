@@ -82,17 +82,20 @@ export default function Home() {
           <p>Два крупных блока команды. Здесь можно будет разместить информацию о ключевых направлениях, подразделениях или руководителях.</p>
         </div>
         <div className="team-grid">
-          <article className="team-block">
-            <span className="team-number">01</span>
-            <div>
+          <article className="team-block team-block-featured">
+            <div className="team-portrait">
+              <img src="/team-speaker.png" alt="Участник команды RockScience у трибуны" />
+            </div>
+            <div className="team-content">
+              <span className="team-number">01</span>
               <p className="team-label">Крупный блок</p>
               <h3>Название первого блока</h3>
               <p>Здесь будет основная информация о первой части команды.</p>
             </div>
           </article>
           <article className="team-block">
-            <span className="team-number">02</span>
-            <div>
+            <div className="team-content">
+              <span className="team-number">02</span>
               <p className="team-label">Крупный блок</p>
               <h3>Название второго блока</h3>
               <p>Здесь будет основная информация о второй части команды.</p>
