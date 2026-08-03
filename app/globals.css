@@ -671,11 +671,11 @@ h2 { letter-spacing: -.006em; }
   will-change: opacity;
 }
 
-.team-block-featured:has(.team-portrait:hover) .team-gold-panel {
+.team-block-featured:hover .team-gold-panel {
   opacity: 1;
 }
 
-.team-block-featured:has(.team-portrait:hover) .team-gold-panel::after {
+.team-block-featured:hover .team-gold-panel::after {
   animation: team-gold-sheen .68s cubic-bezier(.2, .7, .2, 1) both;
 }
 
@@ -686,25 +686,25 @@ h2 { letter-spacing: -.006em; }
   transition: color .22s ease-out;
 }
 
-.team-block-featured:has(.team-portrait:hover) .team-number,
-.team-block-featured:has(.team-portrait:hover) .team-label {
+.team-block-featured:hover .team-number,
+.team-block-featured:hover .team-label {
   color: #694400;
 }
 
-.team-block-featured:has(.team-portrait:hover) h3 {
+.team-block-featured:hover h3 {
   color: #171108;
 }
 
-.team-block-featured:has(.team-portrait:hover) .team-content > p:last-child {
+.team-block-featured:hover .team-content > p:last-child {
   color: #5c4214;
 }
 
-.team-portrait:hover .team-portrait-default {
+.team-block-featured:hover .team-portrait-default {
   opacity: 0;
   transform: translateY(4px) scale(.985);
 }
 
-.team-portrait:hover .team-portrait-hover {
+.team-block-featured:hover .team-portrait-hover {
   opacity: 1;
   transform: none;
   filter: none;
@@ -717,7 +717,7 @@ h2 { letter-spacing: -.006em; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .team-block-featured:has(.team-portrait:hover) .team-gold-panel::after { animation: none; }
+  .team-block-featured:hover .team-gold-panel::after { animation: none; }
 }
 
 .team-block::before {
