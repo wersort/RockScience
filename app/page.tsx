@@ -86,7 +86,7 @@ export default function Home() {
             <span className="team-gold-panel" aria-hidden="true" />
             <div className="team-portrait">
               <img className="team-portrait-default" src="/team-vault-boy.png" alt="Представитель команды RockScience за трибуной" />
-              <img className="team-portrait-hover" src="/team-vault-boy-glow.png" alt="" aria-hidden="true" />
+              <img className="team-portrait-hover" src="/team-vault-boy-glow-clean.png" alt="" aria-hidden="true" />
             </div>
             <div className="team-content">
               <span className="team-number">01</span>
