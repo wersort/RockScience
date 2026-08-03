@@ -84,7 +84,7 @@ export default function Home() {
         <div className="team-grid">
           <article className="team-block team-block-featured">
             <div className="team-portrait">
-              <img src="/team-speaker-smooth.png" alt="Участник команды RockScience у трибуны" />
+              <img src="/team-vault-boy.png" alt="Представитель команды RockScience за трибуной" />
             </div>
             <div className="team-content">
               <span className="team-number">01</span>
