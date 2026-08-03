@@ -557,7 +557,7 @@ h2 { letter-spacing: -.006em; }
   grid-template-columns: 1.15fr .75fr;
   gap: 9vw;
   align-items: end;
-  margin-bottom: 58px;
+  margin-bottom: 40px;
 }
 
 .team-heading h2 {
@@ -575,58 +575,58 @@ h2 { letter-spacing: -.006em; }
 .team-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
-}
-
-.team-block {
-  position: relative;
-  min-height: 400px;
-  padding: 38px 42px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-  background:
-    linear-gradient(145deg, rgba(24, 31, 26, .96), rgba(14, 19, 16, .98));
-  border: 1px solid rgba(255, 255, 255, .09);
+  gap: 0;
+  overflow: visible;
+  background: #101511;
+  border: 1px solid rgba(255, 255, 255, .1);
   border-radius: 7px;
   box-shadow: 0 22px 70px rgba(0, 0, 0, .22);
 }
 
-.team-block-featured {
-  margin-top: 76px;
-  padding: 38px 48px 38px 0;
-  display: grid;
-  grid-template-columns: minmax(360px, .9fr) minmax(340px, 1.1fr);
-  gap: 44px;
-  align-items: center;
-  overflow: visible;
-}
-
-.team-portrait {
+.team-block {
   position: relative;
-  align-self: stretch;
-  min-height: 324px;
-  pointer-events: none;
+  min-height: 420px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  overflow: visible;
+  background: linear-gradient(145deg, rgba(24, 31, 26, .96), rgba(14, 19, 16, .98));
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
 }
 
-.team-portrait img {
-  position: absolute;
-  z-index: 2;
-  left: 0;
-  bottom: -38px;
-  width: auto;
-  height: 530px;
-  max-width: 118%;
-  object-fit: contain;
-  object-position: left bottom;
-  filter: drop-shadow(18px 18px 30px rgba(0, 0, 0, .38));
-}
+.team-block:last-child { border-bottom: 0; }
 
 .team-content {
   position: relative;
   z-index: 3;
-  max-width: 650px;
+  min-width: 0;
+  padding: 48px 54px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.team-media {
+  position: relative;
+  min-width: 0;
+  min-height: 420px;
+  overflow: visible;
+  border-left: 1px solid rgba(255, 255, 255, .1);
+  background:
+    linear-gradient(135deg, rgba(155, 220, 104, .06), transparent 58%),
+    #0c110d;
+}
+
+.team-media-portrait img {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: 485px;
+  max-width: 112%;
+  object-fit: contain;
+  object-position: right bottom;
+  filter: drop-shadow(-18px 18px 30px rgba(0, 0, 0, .36));
 }
 
 .team-block::before {
@@ -652,7 +652,7 @@ h2 { letter-spacing: -.006em; }
 
 .team-number {
   display: inline-block;
-  margin-bottom: 48px;
+  margin-bottom: auto;
   color: var(--acid);
   font-size: 12px;
   letter-spacing: .08em;
@@ -683,34 +683,50 @@ h2 { letter-spacing: -.006em; }
   line-height: 1.7;
 }
 
+.team-media-placeholder {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background-color: #0d120e;
+  background-image:
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.team-media-placeholder::before {
+  content: "";
+  width: 78px;
+  height: 78px;
+  border: 1px solid rgba(155, 220, 104, .25);
+  box-shadow: inset 0 0 0 18px rgba(155, 220, 104, .035);
+  transform: rotate(45deg);
+}
+
+.team-media-placeholder span {
+  position: absolute;
+  bottom: 28px;
+  color: #68736a;
+  font: 400 9px var(--font-kogane), var(--font-unbounded), sans-serif;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
 @media (max-width: 800px) {
   .team-heading { grid-template-columns: 1fr; gap: 26px; }
   .team-heading > p { max-width: 560px; }
-  .team-block { min-height: 330px; }
-  .team-block-featured {
-    margin-top: 90px;
-    padding: 280px 28px 32px;
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-  .team-portrait { position: absolute; inset: 0; min-height: 0; }
-  .team-portrait img {
-    left: 50%;
-    bottom: auto;
-    top: -100px;
-    height: 420px;
-    max-width: 96%;
-    transform: translateX(-50%);
-    object-position: center top;
-  }
+  .team-block { min-height: 360px; }
+  .team-content { padding: 34px; }
+  .team-media { min-height: 360px; }
+  .team-media-portrait img { height: 415px; max-width: 118%; }
 }
 
 @media (max-width: 600px) {
   .team-heading { margin-bottom: 38px; }
-  .team-block { min-height: 300px; padding: 26px; }
-  .team-block-featured { margin-top: 80px; padding-top: 255px; }
-  .team-portrait img { top: -86px; height: 370px; }
-  .team-number { margin-bottom: 34px; }
+  .team-block { grid-template-columns: 1fr; min-height: 0; }
+  .team-content { min-height: 300px; padding: 28px; }
+  .team-media { min-height: 300px; border-left: 0; border-top: 1px solid rgba(255,255,255,.1); }
+  .team-media-portrait img { height: 350px; max-width: 100%; }
 }
 
 /* Cave artwork background */
