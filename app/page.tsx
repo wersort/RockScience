@@ -95,12 +95,15 @@ export default function Home() {
               <p className="team-statement">RockScience — горнодобывающая компания, объединённая одной целью и волей Верховного Руководителя. Вступая в наш коллектив, вы принимаете корпоративные принципы и становитесь частью избранного сообщества. Мы добываем не просто ресурсы — мы создаём будущее. Одна команда. Одна воля. Один лидер.</p>
             </div>
           </article>
-          <article className="team-block">
+          <article className="team-block team-block-secondary">
             <div className="team-content">
               <span className="team-number">02</span>
               <p className="team-label">Крупный блок</p>
               <h3>Название второго блока</h3>
               <p>Здесь будет основная информация о второй части команды.</p>
+            </div>
+            <div className="team-miners">
+              <img src="/team-miners.png" alt="Команда шахтёров RockScience" />
             </div>
           </article>
         </div>
