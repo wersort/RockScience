@@ -206,7 +206,6 @@ footer { min-height: 116px; padding: 28px 4.5vw; display: flex; align-items: cen
 }
 
 body {
-  image-rendering: pixelated;
   background-color: var(--paper);
   background-image:
     linear-gradient(90deg, rgba(55, 47, 35, .035) 50%, transparent 50%),
@@ -625,6 +624,7 @@ h2 { letter-spacing: -.006em; }
   max-width: 115%;
   object-fit: contain;
   object-position: left bottom;
+  image-rendering: auto;
   filter: drop-shadow(18px 18px 30px rgba(0, 0, 0, .36));
 }
 
