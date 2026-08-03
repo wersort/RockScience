@@ -774,6 +774,12 @@ h2 { letter-spacing: -.006em; }
   line-height: 1.7;
 }
 
+.team-content > .team-statement {
+  max-width: 680px;
+  font-size: 13px;
+  line-height: 1.72;
+}
+
 @media (max-width: 800px) {
   .team-heading { grid-template-columns: 1fr; gap: 26px; }
   .team-heading > p { max-width: 560px; }
