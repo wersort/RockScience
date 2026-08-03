@@ -90,7 +90,7 @@ export default function Home() {
               <p>Здесь будет основная информация о первой части команды.</p>
             </div>
             <div className="team-media team-media-portrait">
-              <img src="/team-speaker-clean.png" alt="Участник команды RockScience у трибуны" />
+              <img src="/team-speaker-smooth.png" alt="Участник команды RockScience у трибуны" />
             </div>
           </article>
           <article className="team-block">
